@@ -1,0 +1,27 @@
+{
+  "name": "ts_test",
+  "description": "test typescript",
+  "main": "src/app/app.ts",
+  "authors": [
+    "antoine vaisset"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "angularjs",
+    "typescript"
+  ],
+  "homepage": "https://github.com/antoine-vaisset/ts_test",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.5.5",
+    "lodash": "^4.12.0",
+    "angular-route": "^1.5.5",
+    "bootstrap": "^3.3.6"
+  }
+}

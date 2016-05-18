@@ -1,1 +1,10 @@
+# js build
 node_modules/*
+dist/*
+vendor/*
+typings/*
+npm-debug.log
+
+# ide files
+.idea/*
+*.iml
