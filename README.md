@@ -19,17 +19,18 @@ Télécharger & installer NodeJs : (https://nodejs.org/en/).
 ## Initialiser le projet npm
 
 NPM est utilisé pour gérer les dépendances aux outils de dev :
+
     - bower ==> dépendences libs JS
     - typescript/tsd/typings/tslint ==> compilation du code typescript
     - gulp/wiredep/del/brower-sync ==> task runner pour automatiser le build html/css/js
 
 
-1. Initialiser le projet NPM avec la commande suivante (créé et pré-remplit le fichier package.json)
+#### 1) Initialiser le projet NPM avec la commande suivante (créé et pré-remplit le fichier package.json)
 ```
 npm init
 ```
 
-2. Renseigner les dépendances utiles dans le fichier ```package.json``` :
+#### 2) Renseigner les dépendances utiles dans le fichier ```package.json``` :
 
 - Soit en modifiant le fichier à la main
 ```
@@ -67,12 +68,12 @@ Il faut installer les dépendences en global pour pouvoir ensuite utiliser bower
 
 ## Initialiser le projet bower
 
-1. Initialiser le projet bower avec la commande suivante (créé et pré-remplit le fichier bower.json)
+#### 1) Initialiser le projet bower avec la commande suivante (créé et pré-remplit le fichier bower.json)
 ```
 bower init
 ```
 
-2. Renseigner les dépendances utiles dans le fichier ```bower.json``` :
+#### 2) Renseigner les dépendances utiles dans le fichier ```bower.json``` :
 
 - Soit en modifiant le fichier à la main
 ```
@@ -101,12 +102,12 @@ Lorsqu'on utilise typescript combiné à des libs JS externes, le compilateur ty
 Il existe des fichiers (appelés typings définissants l'interface de ces libs maintenus par la communauté Typescript.
 L'outil TSD permet de facilité la maintenance des dépendances vers ces fichiers.
 
-1. Initialiser le projet TSD (créé et pré-remplit le fichier tsd.json)
+#### 1) Initialiser le projet TSD (créé et pré-remplit le fichier tsd.json)
 ```
 tsd init
 ```
 
-2. Ajouter les dépendences vers les fichiers de typings des libs externes
+#### 2) Ajouter les dépendences vers les fichiers de typings des libs externes
 
 Ici je n'ai pas trouvé pour le moment de moyen de lister les dépendences avant de les résoudres, je les ai donc installer manuellement une par une
 ```
