@@ -11,7 +11,8 @@ var gulp = require('gulp'),
     tsProject = tsc.createProject('tsd.json'),
     browserSync = require('browser-sync'),
     superstatic = require( 'superstatic' ),
-    sass = require('gulp-sass');
+    sass = require('gulp-sass'),
+    wiredep = require('wiredep');
 
 var config = new Config();
 
@@ -97,12 +98,25 @@ gulp.task('sass:watch', function () {
 });
 
 
+gulp.task('bower', function () {
+  gulp.src('./src/footer.html')
+    .pipe(wiredep({
+      optional: 'configuration',
+      goes: 'here'
+    }))
+    .pipe(gulp.dest('./dest'));
+});
+
 gulp.task('index', function () {
   var target = gulp.src('./src/index.html');
   // It's not necessary to read the files (will speed up things), we're only after their paths:
   var sources = gulp.src(['./dist/js/*.js', './dist/css/*.css'], {read: false});
 
-  return target.pipe(inject(sources))
+  return target
+  //inject js files
+  .pipe(inject(sources))
+  //inject bower dependancy
+   .pipe(wiredep.stream())
     .pipe(gulp.dest('./dist'));
 });
 
